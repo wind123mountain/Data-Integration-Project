@@ -6,7 +6,7 @@
 import scrapy
 
 
-class CrawltikiItem(scrapy.Item):
+class CrawlnguyenKimItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

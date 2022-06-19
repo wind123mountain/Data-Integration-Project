@@ -1,4 +1,4 @@
-# Scrapy settings for CrawlTiki project
+# Scrapy settings for CrawlNguyen_Kim project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,17 +7,18 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'CrawlTiki'
+BOT_NAME = 'CrawlNguyen_Kim'
 
-SPIDER_MODULES = ['CrawlTiki.spiders']
-NEWSPIDER_MODULE = 'CrawlTiki.spiders'
+SPIDER_MODULES = ['CrawlNguyen_Kim.spiders']
+NEWSPIDER_MODULE = 'CrawlNguyen_Kim.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'CrawlTiki (+http://www.yourdomain.com)'
+#USER_AGENT = 'CrawlNguyen_Kim (+http://www.yourdomain.com)'
 USER_AGENT =  'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36'
+
 # Obey robots.txt rules
-#ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -45,13 +46,13 @@ USER_AGENT =  'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, li
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'CrawlTiki.middlewares.CrawltikiSpiderMiddleware': 543,
+#    'CrawlNguyen_Kim.middlewares.CrawlnguyenKimSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'CrawlTiki.middlewares.CrawltikiDownloaderMiddleware': 543,
+#    'CrawlNguyen_Kim.middlewares.CrawlnguyenKimDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +64,7 @@ USER_AGENT =  'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, li
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'CrawlTiki.pipelines.CrawltikiPipeline': 300,
+#    'CrawlNguyen_Kim.pipelines.CrawlnguyenKimPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -87,4 +88,3 @@ USER_AGENT =  'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, li
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 FEED_EXPORT_ENCODING = 'utf-8'
-ROBOTSTXT_OBEY = False
