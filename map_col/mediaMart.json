@@ -4,9 +4,9 @@
     "Kích thước màn hình": "Màn hình",
     "RAM": "RAM",
     "Bộ nhớ": "Bộ nhớ",
-    "Chipset": "Chipset",
+    "Chipset": "",
     "Pin": "Dung lượng pin",
-    "Kích thước": "Kích thước",
+    "Kích thước": "", 
     "Bluetooth": "Bluetooth",
     "Camera trước": "Camera trước",
     "Wi-Fi": "Wifi",
@@ -16,7 +16,7 @@
     "Trọng lượng": "",
     "Quay video": "Quay phim",
     "GPU": "Chip đồ họa (GPU)",
-    "Cổng sạc": "",
+    "Cổng sạc": "Cổng kết nối/sạc",
     "url": "url",
     "image_url": "image_link"
    }
