@@ -91,5 +91,16 @@ const CONTENT_DATA = [
 ]
 
 
+const DETAIL_DATA = {
+        'Thương hiệu': 'iphone',
+        'CPU': 'Apple A14 Bionic (5nm)',
+        'Camera trước': '12MP',
+        'RAM': '6GB',
+        'Bộ nhớ trong': '128GB',
+        'Hệ điều hành': 'iOS 14'
+    }
+
 export { SLIDER_DATA as phone_data }
 export { CONTENT_DATA as content_data}
+export { DETAIL_DATA as detail_data}
+
