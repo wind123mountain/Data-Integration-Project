@@ -5,6 +5,7 @@ export default function HomePage(){
     const categories = [
         'iphone', 'samsung', 'oppo', 'xiaomi', 'vivo', 'realme', 'nokia', 'itel','Masstel'
     ]
+    console.log(products);
     return(
         <div>
             {
@@ -21,7 +22,8 @@ export default function HomePage(){
                                     <li className="iteam_box">
                                         {
                                             products.filter((v, i) => {
-                                                return v.category === category
+                                                console.log(typeof(v.name));
+                                                return v.name?.toLowerCase().includes(category);
                                             }).map((v, i) => {
                                                 return (
                                                     <a href='' className="main_box">
