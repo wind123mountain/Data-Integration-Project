@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../components/Header'
-import Slider from '../components/Slider'
-import Content from '../components/Content'
+import Header from '../component/Header'
+import Slider from '../component/Slider'
+import Content from '../component/Content'
 
 export default function Home() {
   return (

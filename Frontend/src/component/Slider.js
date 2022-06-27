@@ -1,4 +1,5 @@
-import { ArrowLeftOutlined, ArrowRightOutlined, Redeem } from '@material-ui/icons'
+import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
+import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import React from 'react'
 import styled from 'styled-components'
 import { phone_data } from './ExampleData'
@@ -6,7 +7,7 @@ import { phone_data } from './ExampleData'
 
 const Container = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -133,21 +134,21 @@ export default function Slider() {
     return (
         <Container>
             <Arrow direction='left' onClick={() => handleClick('left')}>
-                <ArrowLeftOutlined style={{color: 'red'}}/>
+                <ArrowLeftOutlinedIcon style={{color: 'red'}}/>
             </Arrow>
             <Wrapper slideIdx={slideIdx}>
                 {phone_data.map(phone => (
                 <Slide key={phone.id}>
                     <ImageContainer>
-                        <Image src={phone.phone_img} />
+                        <Image src={phone.phone_img} style = {{height: "300px", width : "300px"}}/>
                     </ImageContainer>
                     <InfoContainer>
-                        <StoreLogo>
+                        {/* <StoreLogo>
                             <img src={phone.store_logo} alt="phone" style={{ width: '180px', height: '60px', marginLeft: "-4px" }} />
-                        </StoreLogo>
+                        </StoreLogo> */}
                         <PhoneName>{phone.phone_name}</PhoneName>
                         <Price>{phone.price}</Price>
-                        <Promotion>
+                        {/* <Promotion>
                             <TitlePromotion>
                                 <Redeem />
                                 <b style={{ fontFamily: "Arial, Helvetica, sans-serif", marginLeft: 8 }}>Khuyến mãi</b>
@@ -157,17 +158,17 @@ export default function Slider() {
                                     <InfoPromotion key={idx}>{promotion}</InfoPromotion>
                                 ))}
                             </ul>
-                        </Promotion>
-                        <div style={{ display: "flex", justifyContent: 'flex-end' }}>
+                        </Promotion>  */}
+                        {/* <div style={{ display: "flex", justifyContent: 'flex-end' }}>
                             <Button>Xem ngay</Button>
-                        </div>
+                        </div> */}
                     </InfoContainer>
                 </Slide>
                 ))}
                 
             </Wrapper>
             <Arrow direction='right' onClick={() => handleClick('right')}>
-                <ArrowRightOutlined style={{color: 'red'}}/>
+                <ArrowRightOutlinedIcon style={{color: 'red'}}/>
             </Arrow>
         </Container>
     )

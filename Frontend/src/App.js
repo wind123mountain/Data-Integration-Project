@@ -3,6 +3,7 @@ import './App.css';
 
 
 import HomePage from './component/HomePage.js'
+import Home from './pages/Home';
 import React, { Component } from 'react';
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
     return (
       <div className='HomePage'>
         <HomePage />
+        <Home/>
       </div>
     );
   }

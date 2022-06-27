@@ -1,8 +1,8 @@
 // rfc, rafce
 import React from 'react'
 import styled from 'styled-components'
-import { Search, Home } from '@material-ui/icons'
-
+import SearchIcon from '@mui/icons-material/Search';
+import HomeIcon from '@mui/icons-material/Home';
 const Container = styled.div`
     height: 60px;
     background-color: #CD5C5C;
@@ -55,13 +55,13 @@ export default function Header() {
     <Container>
         <Wrapper>
             <Left>
-                <Home style={{color: '#fff', fontSize: "32px"}}/>
+                <HomeIcon style={{color: '#fff', fontSize: "32px"}}/>
             </Left>
             <Center><Logo>ThePhone</Logo></Center>
             <Right>
                 <SearchArea>
                     <Input />
-                    <Search />
+                    <SearchIcon />
                 </SearchArea>
             </Right>
         </Wrapper>
