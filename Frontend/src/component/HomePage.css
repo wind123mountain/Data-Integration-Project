@@ -91,3 +91,8 @@ a,h3 a {
     font-family: segoe ui;
     font-size: 20px;
 }
+
+.iteam_box:hover {
+    background-color: grey;
+     cursor: pointer;
+}

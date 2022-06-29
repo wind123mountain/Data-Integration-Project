@@ -36,16 +36,18 @@ const Info = styled.p`
     margin: 0px;
 `
 
-export default function PhoneDetail() {
+export default function PhoneDetail({index}) {
+    const data = detail_data[index];
+    console.log(data)
     return (
         <Container>
             <Title>Thông tin chi tiết của sản phẩm</Title>
             <ul style={{ listStyleType: 'none' }}>
-                {Object.keys(detail_data).map((key, index) => (
+                {Object.keys(data).map((key, index) => (
                     <li key={index}>
                         <Item>
                             <Label>{key}</Label>
-                            <Info>{detail_data[key]}</Info>
+                            <Info>{data[key]}</Info>
                         </Item>
                     </li>))}
             </ul>

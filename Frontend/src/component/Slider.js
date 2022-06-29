@@ -2,7 +2,7 @@ import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import React from 'react'
 import styled from 'styled-components'
-import { phone_data } from './ExampleData'
+import products from "./data";
 
 
 const Container = styled.div`
@@ -117,7 +117,7 @@ const Button = styled.button`
 
 
 
-export default function Slider() {
+export default function Slider({index}) {
 
     const [slideIdx, setSlideIdx] = React.useState(0);
 
@@ -128,7 +128,7 @@ export default function Slider() {
             setSlideIdx(slideIdx < 3 ? slideIdx + 1 : 0)
         }
     }
-
+    const phone_data = [products[parseInt(index)]];
 
 
     return (
@@ -140,28 +140,11 @@ export default function Slider() {
                 {phone_data.map(phone => (
                 <Slide key={phone.id}>
                     <ImageContainer>
-                        <Image src={phone.phone_img} style = {{height: "300px", width : "300px"}}/>
+                        <Image src={phone.img} style = {{height: "300px", width : "300px", paddingLeft : "200px"}}/>
                     </ImageContainer>
                     <InfoContainer>
-                        {/* <StoreLogo>
-                            <img src={phone.store_logo} alt="phone" style={{ width: '180px', height: '60px', marginLeft: "-4px" }} />
-                        </StoreLogo> */}
-                        <PhoneName>{phone.phone_name}</PhoneName>
+                        <PhoneName>{phone.name}</PhoneName>
                         <Price>{phone.price}</Price>
-                        {/* <Promotion>
-                            <TitlePromotion>
-                                <Redeem />
-                                <b style={{ fontFamily: "Arial, Helvetica, sans-serif", marginLeft: 8 }}>Khuyến mãi</b>
-                            </TitlePromotion>
-                            <ul>
-                                {phone.promotions.map((promotion, idx) => (
-                                    <InfoPromotion key={idx}>{promotion}</InfoPromotion>
-                                ))}
-                            </ul>
-                        </Promotion>  */}
-                        {/* <div style={{ display: "flex", justifyContent: 'flex-end' }}>
-                            <Button>Xem ngay</Button>
-                        </div> */}
                     </InfoContainer>
                 </Slide>
                 ))}
