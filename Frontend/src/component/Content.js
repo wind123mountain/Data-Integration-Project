@@ -39,7 +39,7 @@ export default function Content({ index }) {
           <Item key={key} pos={key}>
             <h3 style={{ color: "red", flex: 1, marginLeft: "20px" }}>{key}</h3>
             <p style={{ flex: 2 }}>{value.item}</p>
-            <h3 style={{ color: "red", flex: 1 }}>{value.price}</h3>
+            <h3 style={{ color: "red", flex: 1 }}>{value.price}đ</h3>
             {/* <p style={{flex: 1, fontFamily: 'Arial, Helvetica, sans-serif'}}>{data.address}</p> */}
             <div
               style={{

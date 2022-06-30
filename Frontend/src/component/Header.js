@@ -58,11 +58,11 @@ export default function Header() {
       <Wrapper>
         <Left>
           <button onClick={() => navigate("/")}>
-            <HomeIcon style={{ color: "#fff", fontSize: "32px" }} />
+            <HomeIcon style={{ color: "#cd5c5c", fontSize: "32px" }} />
           </button>
         </Left>
         <Center>
-          <Logo>ThePhone</Logo>
+          <Logo>The Phone</Logo>
         </Center>
         <Right>
           <SearchArea>

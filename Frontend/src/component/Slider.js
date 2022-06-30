@@ -144,7 +144,7 @@ export default function Slider({index}) {
                     </ImageContainer>
                     <InfoContainer>
                         <PhoneName>{phone.name}</PhoneName>
-                        <Price>{phone.price}</Price>
+                        <Price>Giá: {phone.price}đ</Price>
                     </InfoContainer>
                 </Slide>
                 ))}
