@@ -2,8 +2,10 @@ import "./HomePage.css";
 import products from "./data";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
+import React, {useState} from 'react'
 
 export default function HomePage() {
+  
   const categories = [
     "iphone",
     "samsung",
@@ -15,9 +17,18 @@ export default function HomePage() {
     "itel",
     "masstel",
   ];
+  const [visible, setVisible] = useState(100)
+  const LoadMore = () =>{
+           setVisible((preValue) => preValue + 100);
+  };
+  const LoadLess = () =>{
+    setVisible((preValue) => preValue - 100);
+  };
   const navigate = useNavigate();
-  return (
+  return ( 
+
     <div>
+     
       {categories.map((category, iC) => {
         return (
           <section key={iC}>
@@ -26,7 +37,7 @@ export default function HomePage() {
             </div>
             <div className="container-productbox">
               <ul className="list-product">
-                {products
+                {products.slice(0,visible)
                   .filter((v, i) => {
                     return v.name?.toLowerCase().includes(category);
                   })
@@ -53,6 +64,8 @@ export default function HomePage() {
                   })}
               </ul>
             </div>
+            <Button onClick={LoadMore}>Load More</Button>
+            <Button onClick={LoadLess}>Collapse</Button>
           </section>
         );
       })}

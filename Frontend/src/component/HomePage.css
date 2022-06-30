@@ -64,11 +64,12 @@ a {
     margin-bottom: 5px;
 }
 
-a,h3 a {
-    font: 14px/18px Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+h3 {
+    font: 18px Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
     color: rgb(44, 86, 165);
     outline: none;
     zoom: 1;
+    font-weight: bold;
 }
 
 .list-product .price {
@@ -82,7 +83,7 @@ a,h3 a {
 
 .list-product .iteam-box .item-img img {
     margin-top: 8px;
-
+    
 }
 
 .title-phone h3 {
@@ -93,6 +94,6 @@ a,h3 a {
 }
 
 .iteam_box:hover {
-    background-color: grey;
+    background-color: rgb(184, 184, 184);
      cursor: pointer;
 }
