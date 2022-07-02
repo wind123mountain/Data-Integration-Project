@@ -11,6 +11,7 @@ import {
 import HomePage from "./component/HomePage.js";
 import Home from "./pages/Home";
 import React, { Component } from "react";
+import Header from './component/Header.js'
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
             path="/"
             element={
               <div className="HomePage">
+                <Header/>
                 <HomePage />
               </div>
             }

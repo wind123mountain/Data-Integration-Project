@@ -6,7 +6,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate } from "react-router-dom";
 const Container = styled.div`
   height: 60px;
-  background-color: #cd5c5c;
+  background-color: rgb(23, 115, 168);
 `;
 
 const Wrapper = styled.div`
@@ -58,12 +58,11 @@ export default function Header() {
       <Wrapper>
         <Left>
           <button onClick={() => navigate("/")}>
-            <HomeIcon style={{ color: "#cd5c5c", fontSize: "32px" }} />
+            <HomeIcon style={{ color: "rgb(23, 115, 168)", fontSize: "32px" }} />
           </button>
+          <Logo> The Phone</Logo>
         </Left>
-        <Center>
-          <Logo>The Phone</Logo>
-        </Center>
+        
         <Right>
           <SearchArea>
             <Input />

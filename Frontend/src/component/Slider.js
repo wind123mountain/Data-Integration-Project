@@ -72,7 +72,7 @@ const StoreLogo = styled.div`
 `
 
 const PhoneName = styled.h1`
-    font-size: 36px;
+    font-size: 32px;
 `
 
 const Price = styled.p`
@@ -143,7 +143,7 @@ export default function Slider({index}) {
                         <Image src={phone.img} style = {{height: "300px", width : "300px", paddingLeft : "200px"}}/>
                     </ImageContainer>
                     <InfoContainer>
-                        <PhoneName>{phone.name}</PhoneName>
+                        <PhoneName>Điện thoại {phone.name}</PhoneName>
                         <Price>Giá: {phone.price}đ</Price>
                     </InfoContainer>
                 </Slide>
