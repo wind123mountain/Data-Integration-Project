@@ -66,13 +66,6 @@ export default function Header() {
           </button>
           <Logo> The Phone</Logo>
         </Left>
-        
-        <Right>
-          <SearchArea>
-            <Input />
-            <SearchIcon />
-          </SearchArea>
-        </Right>
       </Wrapper>
     </Container>
   );
