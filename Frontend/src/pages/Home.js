@@ -4,6 +4,11 @@ import Slider from '../component/Slider'
 import Content from '../component/Content'
 import PhoneDetail from '../component/PhoneDetail'
 export default function Home({id}) {
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div>
         <Header />
