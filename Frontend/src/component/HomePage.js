@@ -173,7 +173,7 @@ export default function HomePage() {
           return (
             <section key={key}>
               <div className="title-phone">
-                <h3>{Object.keys(category)[0].toUpperCase()}</h3>
+                <h3>ĐIỆN THOẠI {Object.keys(category)[0].toUpperCase()}</h3>
               </div>
               <div className="container-productbox">
                 <ul className="list-product">
