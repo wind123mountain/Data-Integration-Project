@@ -31,15 +31,41 @@ const Link = styled.a`
   font-family: Arial, Helvetica, sans-serif;
 `;
 export default function Content({ index }) {
+
+  const handleKey = (key) => {
+    if (key.startsWith('The')){
+      return "Thế giới di động";
+    }else if (key.startsWith('Media')){
+      return "Media Mart";
+    }else if (key.startsWith('World')){
+      return "World Phone";
+    }else if (key.startsWith('Nguyen')){
+      return "Nguyen Kim"
+    }else{
+      return key;
+    }
+  }
+
+  const handlePrice = (key, price) => {
+    if(key.startsWith('The')){
+      return price.replace(".0", "");
+    }else if (key.startsWith("World")){
+      return price.replace("₫", '').replaceAll('.', '')
+    }else{
+      return price.replaceAll('.', '');
+    }
+  }
+
   return (
     <Container>
       <ListHead>So sánh giá của các nơi bán</ListHead>
       <ul style={{ paddingInlineStart: 0 }}>
         {Object.entries(productObj[index]).map(([key, value]) => (
           <Item key={key} pos={key}>
-            <h3 style={{ color: "red", flex: 1, marginLeft: "20px" }}>{key}</h3>
+            <h3 style={{ color: "red", flex: 1, marginLeft: "20px" }}>{handleKey(key)}</h3>
+            {console.log(key)}
             <p style={{ flex: 2 }}>{value.item}</p>
-            <h3 style={{ color: "red", flex: 1 }}>{value.price}đ</h3>
+            <h3 style={{ color: "red", flex: 1 }}>{handlePrice(key, value.price)}đ</h3>
             {/* <p style={{flex: 1, fontFamily: 'Arial, Helvetica, sans-serif'}}>{data.address}</p> */}
             <div
               style={{

@@ -5,15 +5,19 @@ import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
 import {useNavigate } from "react-router-dom";
 const Container = styled.div`
-  height: 60px;
+  height: 50px;
   background-color: rgb(23, 115, 168);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 `;
 
 const Wrapper = styled.div`
   padding: 12px 32px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 `;
 
 const Left = styled.div`
@@ -32,7 +36,7 @@ const Right = styled.div`
 `;
 
 const Logo = styled.b`
-  font-size: 32px;
+  font-size: 24px;
   color: white;
 `;
 
@@ -58,7 +62,7 @@ export default function Header() {
       <Wrapper>
         <Left>
           <button onClick={() => navigate("/")}>
-            <HomeIcon style={{ color: "rgb(23, 115, 168)", fontSize: "32px" }} />
+            <HomeIcon style={{ color: "rgb(23, 115, 168)", fontSize: "24px" }} />
           </button>
           <Logo> The Phone</Logo>
         </Left>

@@ -11,7 +11,7 @@ const Container = styled.div`
     display: flex;
     position: relative;
     overflow: hidden;
-
+    padding: 80px 0px;
 `
 
 
