@@ -7,12 +7,14 @@ const Container = styled.div`
 `;
 
 const ListHead = styled.h2`
-  font-weight: bold;
   margin: 10px 120px;
-  background-color: tomato;
-  font-family: "Times New Roman", Times, serif;
-  width: 20%;
+  background-color: rgb(23, 115, 168);
+  width: 16%;
   text-align: center;
+  color: white;
+  padding: 8px 0px;
+  font-size: 18px;
+  font-family: sans-serif;
 `;
 
 const Item = styled.li`
@@ -66,7 +68,6 @@ export default function Content({ index }) {
             {console.log(key)}
             <p style={{ flex: 2 }}>{value.item}</p>
             <h3 style={{ color: "red", flex: 1 }}>{handlePrice(key, value.price)}đ</h3>
-            {/* <p style={{flex: 1, fontFamily: 'Arial, Helvetica, sans-serif'}}>{data.address}</p> */}
             <div
               style={{
                 alignItems: "center",

@@ -3,7 +3,7 @@ import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import React from 'react'
 import styled from 'styled-components'
 import products from "./data";
-
+import { productObj } from "./data";
 
 const Container = styled.div`
     width: 100%;
@@ -118,6 +118,19 @@ const Button = styled.button`
 
 
 export default function Slider({index}) {
+    const handleKey = (key) => {
+        if (key.startsWith('The')){
+          return "Thế giới di động";
+        }else if (key.startsWith('Media')){
+          return "Media Mart";
+        }else if (key.startsWith('World')){
+          return "World Phone";
+        }else if (key.startsWith('Nguyen')){
+          return "Nguyen Kim"
+        }else{
+          return key;
+        }
+      }
 
     const [slideIdx, setSlideIdx] = React.useState(0);
 
@@ -132,10 +145,8 @@ export default function Slider({index}) {
 
 
     return (
+    
         <Container>
-            <Arrow direction='left' onClick={() => handleClick('left')}>
-                <ArrowLeftOutlinedIcon style={{color: 'red'}}/>
-            </Arrow>
             <Wrapper slideIdx={slideIdx}>
                 {phone_data.map(phone => (
                 <Slide key={phone.id}>
@@ -145,14 +156,11 @@ export default function Slider({index}) {
                     <InfoContainer>
                         <PhoneName>Điện thoại {phone.name}</PhoneName>
                         <Price>Giá: {phone.price}đ</Price>
+                        <p>Có tất cả: {phone.count} nơi bán</p>
                     </InfoContainer>
                 </Slide>
-                ))}
-                
+                ))}                
             </Wrapper>
-            <Arrow direction='right' onClick={() => handleClick('right')}>
-                <ArrowRightOutlinedIcon style={{color: 'red'}}/>
-            </Arrow>
         </Container>
     )
 }

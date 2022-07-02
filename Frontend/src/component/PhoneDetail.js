@@ -8,8 +8,13 @@ const Container = styled.div`
 `
 
 const Title = styled.h3`
-    padding: 8px 0px;
-    font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background-color: rgb(23, 115, 168);
+  font-family:sans-serif;
+  width: 18%;
+  text-align: center;
+  color: white;
+  padding: 8px 0px;
 `
 
 const Item = styled.div`
